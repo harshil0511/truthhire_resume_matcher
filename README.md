@@ -98,6 +98,13 @@ truthhire_resume_matcher/
 
 ## Usage
 
+### API Root
+
+```bash
+curl http://127.0.0.1:8000/
+# Returns a friendly welcome message and links to /docs
+```
+
 ### Health check
 
 ```bash
