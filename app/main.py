@@ -48,6 +48,15 @@ async def validation_exception_handler(
     )
 
 
+@app.get("/", tags=["root"], summary="API Root")
+async def root() -> dict:
+    return {
+        "message": "Welcome to the TruthHire Resume Matcher API.",
+        "docs_url": "/docs",
+        "health_url": "/health",
+    }
+
+
 @app.get("/health", tags=["health"], summary="Health check")
 async def health_check() -> dict:
     return {"status": "ok"}
